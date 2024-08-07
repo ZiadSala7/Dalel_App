@@ -1,9 +1,29 @@
+import 'dart:async';
+
 import 'package:dalel_app/core/utils/app_animation.dart';
 import 'package:dalel_app/core/utils/app_images.dart';
+import 'package:dalel_app/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
-class SplashViewBody extends StatelessWidget {
+class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
+  @override
+  State<SplashViewBody> createState() => _SplashViewBodyState();
+}
+
+class _SplashViewBodyState extends State<SplashViewBody> {
+  late Timer timer;
+  @override
+  void initState() {
+    super.initState();
+    timer = Timer(
+      const Duration(seconds: 6),
+      () {
+        GoRouter.of(context).pushReplacement(AppRouter.onBoarding);
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
