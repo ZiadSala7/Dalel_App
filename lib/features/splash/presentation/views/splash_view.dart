@@ -5,6 +5,17 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: Center(
+        child: Text(
+          "Explore The history with \nDalel in a smart way",
+          style: TextStyle(
+            color: Colors.black,
+            fontSize: 25,
+            fontFamily: "dalelBold",
+          ),
+        ),
+      ),
+    );
   }
 }
