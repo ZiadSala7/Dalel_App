@@ -6,8 +6,8 @@ import 'package:dalel_app/features/onboarding/presentation/views/widgets/custom_
 import 'package:dalel_app/features/onboarding/presentation/views/widgets/custom_smooth_page_indicator.dart';
 import 'package:flutter/material.dart';
 
-class SecondOnboardingBody extends StatelessWidget {
-  const SecondOnboardingBody({super.key});
+class FirstOnboardingScreenBody extends StatelessWidget {
+  const FirstOnboardingScreenBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class SecondOnboardingBody extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              Image.asset(AppImages.onboarding2),
+              Image.asset(AppImages.onboarding1),
               const SizedBox(
                 height: 30,
               ),
@@ -30,7 +30,7 @@ class SecondOnboardingBody extends StatelessWidget {
                 height: 30,
               ),
               Text(
-                'From every place \non earth',
+                'Explore The history with \nDalel in a smart way',
                 textAlign: TextAlign.center,
                 style: AppStyles.textStyle25.copyWith(
                   fontFamily: dalelBold,
@@ -40,7 +40,7 @@ class SecondOnboardingBody extends StatelessWidget {
                 height: 25,
               ),
               Text(
-                "A big variety of ancient places \nfrom all over the world",
+                'Using our app’s history libraries \nyou can find many historical periods ',
                 textAlign: TextAlign.center,
                 style: AppStyles.textStyle18.copyWith(
                   fontFamily: dalelReg,
@@ -57,7 +57,7 @@ class SecondOnboardingBody extends StatelessWidget {
         ),
         const SizedBox(
           height: 40,
-        ),
+        )
       ],
     );
   }
