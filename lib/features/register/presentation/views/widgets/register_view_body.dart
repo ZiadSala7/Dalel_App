@@ -12,7 +12,7 @@ class RegisterViewBody extends StatelessWidget {
       slivers: [
         SliverToBoxAdapter(
           child: SizedBox(
-            height: 170,
+            height: 150,
           ),
         ),
         SliverToBoxAdapter(
@@ -20,7 +20,7 @@ class RegisterViewBody extends StatelessWidget {
         ),
         SliverToBoxAdapter(
           child: SizedBox(
-            height: 100,
+            height: 120,
           ),
         ),
         SliverToBoxAdapter(
