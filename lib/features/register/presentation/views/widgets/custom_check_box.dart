@@ -42,7 +42,8 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
             fontFamily: dalelReg,
           ),
         ),
-        GestureDetector(
+        InkWell(
+          onTap: () {},
           child: Text(
             "Terms and Condition",
             style: AppStyles.textStyle14.copyWith(

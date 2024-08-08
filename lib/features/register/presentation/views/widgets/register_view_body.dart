@@ -1,6 +1,5 @@
-import 'package:dalel_app/core/widgets/custom_button.dart';
-import 'package:dalel_app/features/register/presentation/views/widgets/custom_is_account_found.dart';
 import 'package:dalel_app/features/register/presentation/views/widgets/custom_text_fields_section.dart';
+import 'package:dalel_app/features/register/presentation/views/widgets/ustom_buttons_section.dart';
 import 'package:flutter/material.dart';
 
 class RegisterViewBody extends StatelessWidget {
@@ -8,22 +7,24 @@ class RegisterViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        const CustomTextFieldsSection(),
-        CustomButton(
-          txt: "Sign Up",
-          onPressed: () {},
+    return const CustomScrollView(
+      shrinkWrap: true,
+      slivers: [
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: 170,
+          ),
         ),
-        CustomAccountIsFound(
-          mainText: "Already have an account?",
-          subText: "Sign in",
-          onPressed: () {},
+        SliverToBoxAdapter(
+          child: CustomTextFieldsSection(),
         ),
-        const SizedBox(
-          height: 10,
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: 100,
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: CustomButtonsSection(),
         ),
       ],
     );
