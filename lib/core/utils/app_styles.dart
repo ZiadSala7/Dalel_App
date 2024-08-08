@@ -16,4 +16,7 @@ class AppStyles {
   static const TextStyle textStyle18 = TextStyle(
     fontSize: 18,
   );
+  static const TextStyle textStyle16 = TextStyle(
+    fontSize: 16,
+  );
 }

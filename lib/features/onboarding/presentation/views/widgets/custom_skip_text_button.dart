@@ -1,4 +1,5 @@
 import 'package:dalel_app/core/utils/app_styles.dart';
+import 'package:dalel_app/features/onboarding/presentation/views/widgets/onboarding_view_body.dart';
 import 'package:flutter/material.dart';
 
 class CustomSkipTextButton extends StatelessWidget {
@@ -11,7 +12,9 @@ class CustomSkipTextButton extends StatelessWidget {
     return Align(
       alignment: Alignment.topRight,
       child: TextButton(
-        onPressed: () {},
+        onPressed: () {
+          controller.jumpToPage(3);
+        },
         child: Text(
           'Skip',
           style: AppStyles.textStyle18.copyWith(
