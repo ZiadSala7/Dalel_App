@@ -7,4 +7,5 @@ class AppImages {
   static const String login = "assets/imgs/login.png";
   static const String login2 = "assets/imgs/login2.png";
   static const String login3 = "assets/imgs/login3.png";
+  static const String forgetPass = "assets/imgs/forgetPass.png";
 }
