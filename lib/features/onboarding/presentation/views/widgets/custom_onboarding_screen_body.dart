@@ -1,4 +1,5 @@
 import 'package:dalel_app/constants.dart';
+import 'package:dalel_app/core/utils/app_router.dart';
 import 'package:dalel_app/core/utils/app_styles.dart';
 import 'package:dalel_app/core/widgets/custom_button.dart';
 import 'package:dalel_app/features/onboarding/data/models/onboarding_model.dart';
@@ -6,6 +7,8 @@ import 'package:dalel_app/features/onboarding/presentation/views/widgets/custom_
 import 'package:dalel_app/features/onboarding/presentation/views/widgets/custom_smooth_page_indicator.dart';
 import 'package:dalel_app/features/onboarding/presentation/views/widgets/onboarding_view_body.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class CustomOnboardingScreenBody extends StatelessWidget {
   final OnboardingModel onboardingModel;
@@ -57,13 +60,18 @@ class CustomOnboardingScreenBody extends StatelessWidget {
         ),
         CustomButton(
           txt: onboardingModel.isLast ? 'Create Account' : 'Next',
-          onPressed: () {
-            !onboardingModel.isLast
-                ? controller.nextPage(
-                    duration: const Duration(seconds: 1),
-                    curve: Curves.linearToEaseOut,
-                  )
-                : null;
+          onPressed: () async {
+            if (!onboardingModel.isLast) {
+              controller.nextPage(
+                duration: const Duration(seconds: 1),
+                curve: Curves.linearToEaseOut,
+              );
+            } else {
+              final prefs = await SharedPreferences.getInstance();
+              prefs.setBool('onboarding', true);
+              // ignore: use_build_context_synchronously
+              GoRouter.of(context).pushReplacement(AppRouter.registerView);
+            }
           },
         ),
         Padding(

@@ -1,9 +1,11 @@
 import 'package:dalel_app/features/onboarding/presentation/views/onboarding_view.dart';
+import 'package:dalel_app/features/register/presentation/views/register_view.dart';
 import 'package:dalel_app/features/splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
   static const String onBoarding = '/onBoarding';
+  static const String registerView = '/registerView';
   static final router = GoRouter(
     routes: [
       GoRoute(
@@ -13,6 +15,10 @@ class AppRouter {
       GoRoute(
         path: AppRouter.onBoarding,
         builder: (context, state) => const OnboardingView(),
+      ),
+      GoRoute(
+        path: AppRouter.registerView,
+        builder: (context, state) => const RegisterView(),
       ),
     ],
   );
