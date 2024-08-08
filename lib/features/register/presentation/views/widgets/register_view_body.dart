@@ -1,5 +1,5 @@
 import 'package:dalel_app/features/register/presentation/views/widgets/custom_text_fields_section.dart';
-import 'package:dalel_app/features/register/presentation/views/widgets/ustom_buttons_section.dart';
+import 'package:dalel_app/features/register/presentation/views/widgets/custom_buttons_section.dart';
 import 'package:flutter/material.dart';
 
 class RegisterViewBody extends StatelessWidget {
