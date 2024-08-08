@@ -5,8 +5,8 @@ import 'package:dalel_app/core/widgets/custom_text_field.dart';
 import 'package:dalel_app/features/register/presentation/views/widgets/custom_check_box.dart';
 import 'package:flutter/material.dart';
 
-class CustomTextFieldsSection extends StatelessWidget {
-  const CustomTextFieldsSection({
+class CustomRegisterTextFieldsSection extends StatelessWidget {
+  const CustomRegisterTextFieldsSection({
     super.key,
   });
 

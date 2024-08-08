@@ -4,8 +4,8 @@ import 'package:dalel_app/core/widgets/custom_password_text_field.dart';
 import 'package:dalel_app/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
-class CustomTextFieldsSection extends StatelessWidget {
-  const CustomTextFieldsSection({
+class CustomLoginTextFieldsSection extends StatelessWidget {
+  const CustomLoginTextFieldsSection({
     super.key,
   });
 

@@ -2,14 +2,15 @@ import 'package:dalel_app/core/widgets/custom_button.dart';
 import 'package:dalel_app/features/register/presentation/views/widgets/custom_is_account_found.dart';
 import 'package:flutter/material.dart';
 
-class CustomButtonsSection extends StatelessWidget {
-  const CustomButtonsSection({
+class CustomLoginButtonsSection extends StatelessWidget {
+  const CustomLoginButtonsSection({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         Align(
           alignment: Alignment.centerRight,
