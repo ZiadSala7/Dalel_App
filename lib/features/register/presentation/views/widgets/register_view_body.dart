@@ -1,4 +1,4 @@
-import 'package:dalel_app/features/register/presentation/views/widgets/custom_tregister_ext_fields_section.dart';
+import 'package:dalel_app/features/register/presentation/views/widgets/custom_register_text_fields_section.dart';
 import 'package:dalel_app/features/register/presentation/views/widgets/custom_register_buttons_section.dart';
 import 'package:flutter/material.dart';
 
