@@ -1,9 +1,11 @@
 import 'package:dalel_app/constants.dart';
 import 'package:dalel_app/core/utils/app_images.dart';
+import 'package:dalel_app/core/utils/app_router.dart';
 import 'package:dalel_app/core/utils/app_styles.dart';
 import 'package:dalel_app/core/widgets/custom_button.dart';
 import 'package:dalel_app/core/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ForgetPasswordViewBody extends StatelessWidget {
   const ForgetPasswordViewBody({super.key});
@@ -44,7 +46,9 @@ class ForgetPasswordViewBody extends StatelessWidget {
           ),
           CustomButton(
             txt: "Send Verification Code",
-            onPressed: () {},
+            onPressed: () {
+              GoRouter.of(context).push(AppRouter.verifyPasswordView);
+            },
           ),
         ],
       ),
