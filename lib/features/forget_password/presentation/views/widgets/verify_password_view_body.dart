@@ -43,18 +43,7 @@ class _VerifyPasswordViewBodyState extends State<VerifyPasswordViewBody> {
           const SizedBox(
             height: 35,
           ),
-          Pinput(
-            onChanged: (value) {
-              setState(() {
-                isCompleted = false;
-              });
-            },
-            onCompleted: (value) {
-              isCompleted = true;
-            },
-            defaultPinTheme: defaultPinTheme,
-            focusedPinTheme: focusedPinTheme,
-          ),
+          pinputMethod(),
           const SizedBox(
             height: 35,
           ),
@@ -85,6 +74,21 @@ class _VerifyPasswordViewBodyState extends State<VerifyPasswordViewBody> {
           CustomVerificationButton(isCompleted: isCompleted),
         ],
       ),
+    );
+  }
+
+  Pinput pinputMethod() {
+    return Pinput(
+      onChanged: (value) {
+        setState(() {
+          isCompleted = false;
+        });
+      },
+      onCompleted: (value) {
+        isCompleted = true;
+      },
+      defaultPinTheme: defaultPinTheme,
+      focusedPinTheme: focusedPinTheme,
     );
   }
 }
