@@ -36,7 +36,9 @@ class CustomLoginButtonsSection extends StatelessWidget {
         CustomAccountIsFound(
           mainText: "Don't have an account?",
           subText: "Sign up",
-          onPressed: () {},
+          onPressed: () {
+            GoRouter.of(context).push(AppRouter.registerView);
+          },
         ),
       ],
     );

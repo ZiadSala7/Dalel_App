@@ -27,7 +27,7 @@ class CustomAccountIsFound extends StatelessWidget {
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: onPressed,
           child: Text(
             subText,
             style: AppStyles.textStyle14.copyWith(
