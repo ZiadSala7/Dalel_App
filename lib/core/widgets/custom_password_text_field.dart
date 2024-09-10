@@ -1,23 +1,33 @@
 import 'package:dalel_app/constants.dart';
 import 'package:flutter/material.dart';
 
-class CustomPasswordTextField extends StatefulWidget {
+class CustomPasswordTextFormField extends StatefulWidget {
   // final TextEditingController controller;
   final String labelText;
-  const CustomPasswordTextField({super.key, required this.labelText});
+  final Function(String value) onChanged;
+  final Function(String value) onFieldSubmitted;
+  const CustomPasswordTextFormField({
+    super.key,
+    required this.labelText,
+    required this.onChanged,
+    required this.onFieldSubmitted,
+  });
 
   @override
-  State<CustomPasswordTextField> createState() =>
-      _CustomPasswordTextFieldState();
+  State<CustomPasswordTextFormField> createState() =>
+      _CustomPasswordTextFormFieldState();
 }
 
-class _CustomPasswordTextFieldState extends State<CustomPasswordTextField> {
+class _CustomPasswordTextFormFieldState
+    extends State<CustomPasswordTextFormField> {
   bool isClicked = false;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: TextField(
+      child: TextFormField(
+        onChanged: widget.onChanged,
+        onFieldSubmitted: widget.onFieldSubmitted,
         obscureText: isClicked,
         cursorColor: borderColor,
         decoration: InputDecoration(

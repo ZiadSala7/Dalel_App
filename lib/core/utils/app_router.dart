@@ -1,9 +1,12 @@
+import 'package:dalel_app/core/services/service_locator.dart';
 import 'package:dalel_app/features/forget_password/presentation/views/forget_password_view.dart';
 import 'package:dalel_app/features/forget_password/presentation/views/verify_password_view.dart';
 import 'package:dalel_app/features/login/presentation/views/login_view.dart';
 import 'package:dalel_app/features/onboarding/presentation/views/onboarding_view.dart';
+import 'package:dalel_app/features/register/presentation/view_models/cubit/register_cubit.dart';
 import 'package:dalel_app/features/register/presentation/views/register_view.dart';
 import 'package:dalel_app/features/splash/presentation/views/splash_view.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
@@ -25,7 +28,10 @@ class AppRouter {
       ),
       GoRoute(
         path: AppRouter.registerView,
-        builder: (context, state) => const RegisterView(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => getIt<RegisterCubit>(),
+          child: const RegisterView(),
+        ),
       ),
       GoRoute(
         path: AppRouter.loginView,

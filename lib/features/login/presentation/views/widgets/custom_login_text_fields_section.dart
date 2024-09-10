@@ -23,14 +23,18 @@ class CustomLoginTextFieldsSection extends StatelessWidget {
         const SizedBox(
           height: 40,
         ),
-        const CustomTextField(
+        CustomTextFormField(
           labelText: "Email Address :",
+          onChanged: (String value) {},
+          onFieldSubmitted: (String value) {},
         ),
         const SizedBox(
           height: 30,
         ),
-        const CustomPasswordTextField(
+        CustomPasswordTextFormField(
           labelText: "Password :",
+          onChanged: (String value) {},
+          onFieldSubmitted: (String value) {},
         ),
       ],
     );
