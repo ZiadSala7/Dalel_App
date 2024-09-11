@@ -6,17 +6,20 @@ class CustomTextFormField extends StatelessWidget {
   final String labelText;
   final Function(String value) onChanged;
   final Function(String value) onFieldSubmitted;
+  final String? Function(String? value)? validateMethod;
   const CustomTextFormField(
       {super.key,
       required this.labelText,
       required this.onChanged,
-      required this.onFieldSubmitted});
+      required this.onFieldSubmitted,
+      required this.validateMethod});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: TextFormField(
+        validator: validateMethod,
         onChanged: onChanged,
         onFieldSubmitted: onFieldSubmitted,
         cursorColor: borderColor,

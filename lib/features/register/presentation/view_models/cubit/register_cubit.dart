@@ -1,13 +1,15 @@
 import 'package:dalel_app/features/register/presentation/view_models/cubit/register_cubit_states.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RegisterCubit extends Cubit<RegisterCubitStates> {
   RegisterCubit() : super(InitialStateRegister());
-  String firstName = '';
-  String lastName = '';
-  String emailAddress = '';
-  String password = '';
+  GlobalKey<FormState> signUpFormKey = GlobalKey();
+  late String firstName;
+  late String lastName;
+  late String emailAddress;
+  late String password;
 
   registerMethod(String email, String password) async {
     try {

@@ -27,6 +27,7 @@ class CustomLoginTextFieldsSection extends StatelessWidget {
           labelText: "Email Address :",
           onChanged: (String value) {},
           onFieldSubmitted: (String value) {},
+          validateMethod: (String? emailAddress) {},
         ),
         const SizedBox(
           height: 30,
@@ -35,6 +36,7 @@ class CustomLoginTextFieldsSection extends StatelessWidget {
           labelText: "Password :",
           onChanged: (String value) {},
           onFieldSubmitted: (String value) {},
+          validateMethod: (String? emailAddress) {},
         ),
       ],
     );

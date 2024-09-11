@@ -6,11 +6,13 @@ class CustomPasswordTextFormField extends StatefulWidget {
   final String labelText;
   final Function(String value) onChanged;
   final Function(String value) onFieldSubmitted;
+  final String? Function(String?)? validateMethod;
   const CustomPasswordTextFormField({
     super.key,
     required this.labelText,
     required this.onChanged,
     required this.onFieldSubmitted,
+    this.validateMethod,
   });
 
   @override
@@ -26,6 +28,7 @@ class _CustomPasswordTextFormFieldState
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: TextFormField(
+        validator: widget.validateMethod,
         onChanged: widget.onChanged,
         onFieldSubmitted: widget.onFieldSubmitted,
         obscureText: isClicked,

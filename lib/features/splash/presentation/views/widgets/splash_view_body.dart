@@ -26,7 +26,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
         final onboardingchecker = prefs.getBool('onboarding');
         onboardingchecker == false
             ? GoRouter.of(context).pushReplacement(AppRouter.onBoarding)
-            : GoRouter.of(context).pushReplacement(AppRouter.loginView);
+            : GoRouter.of(context).pushReplacement(AppRouter.registerView);
       },
     );
   }
