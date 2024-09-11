@@ -6,4 +6,7 @@ class LoadingStateRegister extends RegisterCubitStates {}
 
 class SuccessStateRegister extends RegisterCubitStates {}
 
-class FailureStateRegister extends RegisterCubitStates {}
+class FailureStateRegister extends RegisterCubitStates {
+  final String errMessage;
+  FailureStateRegister({required this.errMessage});
+}
