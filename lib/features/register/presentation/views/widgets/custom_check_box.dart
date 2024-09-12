@@ -1,6 +1,8 @@
 import 'package:dalel_app/constants.dart';
 import 'package:dalel_app/core/utils/app_styles.dart';
+import 'package:dalel_app/features/register/presentation/view_models/cubit/register_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class CustomCheckBox extends StatefulWidget {
   const CustomCheckBox({
@@ -24,6 +26,8 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
           onPressed: () {
             setState(() {
               isClicked = !isClicked;
+              BlocProvider.of<RegisterCubit>(context).termsAndConditions =
+                  !BlocProvider.of<RegisterCubit>(context).termsAndConditions;
             });
           },
           icon: isClicked

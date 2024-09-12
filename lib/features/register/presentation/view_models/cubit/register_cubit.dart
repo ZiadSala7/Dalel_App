@@ -10,6 +10,7 @@ class RegisterCubit extends Cubit<RegisterCubitStates> {
   late String lastName;
   late String emailAddress;
   late String password;
+  bool termsAndConditions = false;
 
   registerMethod(String email, String password) async {
     try {
@@ -17,7 +18,10 @@ class RegisterCubit extends Cubit<RegisterCubitStates> {
       await FirebaseAuth.instance
           .createUserWithEmailAndPassword(email: email, password: password);
       emit(SuccessStateRegister());
+      print('Success');
     } on FirebaseAuthException catch (e) {
+      print(e.code);
+      print('object');
       if (e.code == 'weak-password') {
         emit(
           FailureStateRegister(
@@ -32,6 +36,8 @@ class RegisterCubit extends Cubit<RegisterCubitStates> {
         );
       }
     } catch (e) {
+      print(e);
+
       emit(
         FailureStateRegister(
           errMessage: e.toString(),

@@ -44,7 +44,6 @@ class ForgetPasswordViewBody extends StatelessWidget {
             labelText: "Email Address : ",
             onChanged: (String value) {},
             onFieldSubmitted: (String value) {},
-            validateMethod: (String? emailAddress) {},
           ),
           const SizedBox(
             height: 130,
