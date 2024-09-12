@@ -1,4 +1,4 @@
-import 'package:dalel_app/features/register/presentation/views/widgets/custom_register_text_fields_section.dart';
+import 'package:dalel_app/features/register/presentation/views/widgets/custom_register_data_section.dart';
 import 'package:flutter/material.dart';
 
 class RegisterViewBody extends StatelessWidget {
@@ -15,7 +15,7 @@ class RegisterViewBody extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
-          child: CustomRegisterTextFieldsSection(),
+          child: CustomRegisterDataSection(),
         ),
       ],
     );
