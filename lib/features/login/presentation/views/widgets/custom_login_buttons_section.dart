@@ -31,7 +31,9 @@ class CustomLoginButtonsSection extends StatelessWidget {
         ),
         CustomButton(
           txt: "Sign Up",
-          onPressed: () {},
+          onPressed: () {
+            GoRouter.of(context).push(AppRouter.homeNavBar);
+          },
         ),
         CustomAccountIsFound(
           mainText: "Don't have an account?",
