@@ -1,7 +1,5 @@
-import 'package:dalel_app/constants.dart';
-import 'package:dalel_app/core/utils/app_images.dart';
-import 'package:dalel_app/core/utils/app_styles.dart';
-import 'package:dalel_app/features/home/presentation/views/widgets/historical_period_item.dart';
+import 'package:dalel_app/features/home/presentation/views/widgets/custom_edited_text.dart';
+import 'package:dalel_app/features/home/presentation/views/widgets/historical_period_section.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -9,46 +7,23 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Text(
-            'Historical periods',
-            style: AppStyles.textStyle25.copyWith(
-              color: Colors.brown,
-              fontFamily: dalelBold,
-            ),
+          CustomEditedText(
+            text: 'Historical periods',
           ),
-          const SizedBox(height: 16),
-          const HistoricalPeriodSection()
+          SizedBox(height: 16),
+          HistoricalPeriodSection(),
+          SizedBox(height: 35),
+          CustomEditedText(
+            text: 'Historical Characters',
+          ),
         ],
       ),
-    );
-  }
-}
-
-class HistoricalPeriodSection extends StatelessWidget {
-  const HistoricalPeriodSection({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        HistoricalPeriodItem(
-          text: 'Ancient\nEgypt',
-          image: AppImages.ancientEgypt,
-        ),
-        HistoricalPeriodItem(
-          text: 'Islamic\nEra',
-          image: AppImages.islamicEra,
-        ),
-      ],
     );
   }
 }
