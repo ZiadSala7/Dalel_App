@@ -8,7 +8,7 @@ BoxDecoration customBoxDecorationMethod() {
       BoxShadow(
         color: Colors.grey,
         blurRadius: 10,
-        offset: Offset(0, 7),
+        offset: Offset(0, 5),
       )
     ],
   );

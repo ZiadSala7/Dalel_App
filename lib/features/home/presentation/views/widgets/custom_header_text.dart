@@ -2,9 +2,9 @@ import 'package:dalel_app/constants.dart';
 import 'package:dalel_app/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 
-class CustomEditedText extends StatelessWidget {
+class CustomHeaderText extends StatelessWidget {
   final String text;
-  const CustomEditedText({
+  const CustomHeaderText({
     super.key,
     required this.text,
   });

@@ -27,6 +27,8 @@ class HistoricalPeriodItem extends StatelessWidget {
               color: Colors.brown[600],
               fontWeight: FontWeight.w500,
             ),
+            maxLines: 2,
+            textAlign: TextAlign.center,
           ),
           Image.asset(
             image,

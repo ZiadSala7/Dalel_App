@@ -3,17 +3,16 @@ import 'package:dalel_app/features/home/presentation/views/widgets/custom_catego
 import 'package:dalel_app/features/home/presentation/views/widgets/custom_list_view_separated.dart';
 import 'package:flutter/material.dart';
 
-class HistoricalCharactersSection extends StatelessWidget {
-  const HistoricalCharactersSection({
-    super.key,
-  });
+class HistoricalSouvenirsSection extends StatelessWidget {
+  const HistoricalSouvenirsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const CustomListViewSeparated(
-        widget: CustomCategoryItem(
-      name: 'Lionheart',
-      image: AppImages.lionHeart,
-    ));
+      widget: CustomCategoryItem(
+        name: 'Puzzles',
+        image: AppImages.puzzles,
+      ),
+    );
   }
 }
