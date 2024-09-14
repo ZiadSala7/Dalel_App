@@ -8,4 +8,6 @@ class AppImages {
   static const String login2 = "assets/imgs/login2.png";
   static const String login3 = "assets/imgs/login3.png";
   static const String forgetPass = "assets/imgs/forgetPass.png";
+  static const String ancientEgypt = "assets/imgs/ancient_egypt.png";
+  static const String islamicEra = "assets/imgs/islamic_era.png";
 }

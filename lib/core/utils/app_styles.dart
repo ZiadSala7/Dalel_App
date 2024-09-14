@@ -8,7 +8,9 @@ class AppStyles {
   static const TextStyle textStyle22 = TextStyle(
     fontSize: 22,
   );
-
+  static const TextStyle textStyle20 = TextStyle(
+    fontSize: 20,
+  );
   static const TextStyle textStyle30 = TextStyle(
     fontSize: 30,
   );
