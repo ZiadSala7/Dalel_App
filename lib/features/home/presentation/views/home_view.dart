@@ -1,4 +1,4 @@
-import 'package:dalel_app/core/utils/app_images.dart';
+import 'package:dalel_app/features/home/presentation/views/widgets/custom_home_view_appbar.dart';
 import 'package:dalel_app/features/home/presentation/views/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 
@@ -8,17 +8,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          Image.asset(
-            AppImages.splashImg,
-            width: 60,
-          ),
-          const SizedBox(
-            width: 10,
-          ),
-        ],
-      ),
+      appBar: customHomeViewAppBar(),
       drawer: const Drawer(),
       body: const HomeViewBody(),
     );
