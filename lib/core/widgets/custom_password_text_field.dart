@@ -1,4 +1,5 @@
 import 'package:dalel_app/constants.dart';
+import 'package:dalel_app/core/widgets/outline_input_border_method.dart';
 import 'package:flutter/material.dart';
 
 class CustomPasswordTextFormField extends StatefulWidget {
@@ -33,36 +34,28 @@ class _CustomPasswordTextFormFieldState
         onFieldSubmitted: widget.onFieldSubmitted,
         obscureText: isClicked,
         cursorColor: borderColor,
-        decoration: InputDecoration(
-          suffixIcon: IconButton(
-            onPressed: () {
-              setState(() {
-                isClicked = !isClicked;
-              });
-            },
-            icon: isClicked
-                ? const Icon(Icons.visibility_off)
-                : const Icon(Icons.visibility),
-          ),
-          labelText: widget.labelText,
-          labelStyle: const TextStyle(
-            color: Color(0xffB4ACAD),
-            fontFamily: dalelReg,
-          ),
-          focusedBorder: outlineInputBorderMethod(),
-          enabledBorder: outlineInputBorderMethod(),
-        ),
+        decoration: inputDecorationMethod(),
       ),
     );
   }
 
-  OutlineInputBorder outlineInputBorderMethod() {
-    return OutlineInputBorder(
-      borderSide: const BorderSide(
-        color: borderColor,
-        width: 2,
+  InputDecoration inputDecorationMethod() {
+    return InputDecoration(
+      suffixIcon: IconButton(
+        onPressed: () {
+          setState(() {
+            isClicked = !isClicked;
+          });
+        },
+        icon: isClicked
+            ? const Icon(Icons.visibility_off_outlined)
+            : const Icon(Icons.visibility_outlined),
       ),
-      borderRadius: BorderRadius.circular(5),
+      labelText: widget.labelText,
+      labelStyle:
+          const TextStyle(color: Color(0xffB4ACAD), fontFamily: dalelReg),
+      focusedBorder: outlineInputBorderMethod(),
+      enabledBorder: outlineInputBorderMethod(),
     );
   }
 }

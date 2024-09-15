@@ -12,15 +12,9 @@ class OnboardingViewBody extends StatelessWidget {
     return PageView(
       controller: controller,
       children: [
-        CustomOnboardingScreen(
-          onboardingModel: onboarding[0],
-        ),
-        CustomOnboardingScreen(
-          onboardingModel: onboarding[1],
-        ),
-        CustomOnboardingScreen(
-          onboardingModel: onboarding[2],
-        ),
+        CustomOnboardingScreen(onboardingModel: onboarding[0]),
+        CustomOnboardingScreen(onboardingModel: onboarding[1]),
+        CustomOnboardingScreen(onboardingModel: onboarding[2]),
       ],
     );
   }
