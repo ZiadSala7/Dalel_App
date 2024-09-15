@@ -5,6 +5,7 @@ import 'package:dalel_app/core/widgets/custom_button.dart';
 import 'package:dalel_app/features/onboarding/data/models/onboarding_model.dart';
 import 'package:dalel_app/features/onboarding/presentation/views/widgets/custom_skip_text_button.dart';
 import 'package:dalel_app/features/onboarding/presentation/views/widgets/custom_smooth_page_indicator.dart';
+import 'package:dalel_app/features/onboarding/presentation/views/widgets/onboarding_login_button.dart';
 import 'package:dalel_app/features/onboarding/presentation/views/widgets/onboarding_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -19,6 +20,9 @@ class CustomOnboardingScreenBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
+        const SizedBox(
+          height: 40,
+        ),
         Expanded(
           child: Column(
             children: [
@@ -69,26 +73,13 @@ class CustomOnboardingScreenBody extends StatelessWidget {
             } else {
               final prefs = await SharedPreferences.getInstance();
               prefs.setBool('onboarding', true);
-              // ignore: use_build_context_synchronously
               GoRouter.of(context).pushReplacement(AppRouter.registerView);
             }
           },
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 80),
-          child: onboardingModel.isLast
-              ? TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Login Now",
-                    style: AppStyles.textStyle16.copyWith(
-                      color: brownColor,
-                      decoration: TextDecoration.underline,
-                      decorationColor: brownColor,
-                    ),
-                  ),
-                )
-              : null,
+          child: onboardingModel.isLast ? const OnboardingLoginButton() : null,
         ),
         SizedBox(
           height: onboardingModel.isLast ? 10 : 40,

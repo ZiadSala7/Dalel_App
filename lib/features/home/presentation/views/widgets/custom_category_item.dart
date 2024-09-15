@@ -22,6 +22,7 @@ class CustomCategoryItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           ImageWidget(image: image),
+          const SizedBox(height: 5),
           Text(
             name,
             style: AppStyles.textStyle17.copyWith(

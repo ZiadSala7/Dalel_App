@@ -20,7 +20,7 @@ class HomeBottomNavBar extends StatelessWidget {
       items: _buildItems(),
       backgroundColor: brownColor,
       decoration: navBarDecorationMethod(),
-      navBarStyle: NavBarStyle.style9,
+      navBarStyle: NavBarStyle.style6,
     );
   }
 
